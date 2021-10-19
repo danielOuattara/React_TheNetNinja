@@ -12,7 +12,6 @@ function App() {
       <NavBar />
       <div className="content">
         <Home />
-
       </div>
     </div>
   );

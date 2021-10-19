@@ -1,7 +1,9 @@
 
-import  { useState } from  "react";
-import  BlogList from "./BlogList"
+import { useState } from  "react";
+import BlogList0 from "./BlogList0"
+import BlogList1 from "./BlogList1"
 import BlogList2 from "./BlogList2";
+import BlogList3 from "./BlogList3";
 
 const Home = () => {
 
@@ -11,13 +13,15 @@ const Home = () => {
         { title: "Web dev top tips",        body:"lorem ipsum...", author: "Stella", id:3},
     ]);
 
-    // const handleClick = () => { }
-
     return (
         <div className="home">
-            <BlogList blogs={ blogs } title="All Blogs  1 !"/>
+            <BlogList0 blogs={blogs} title="All Blogs 0 !"/>
+            <hr />
+            <BlogList1 blogs={blogs} title="All Blogs 1 !"/>
             <hr />
             <BlogList2 blogs={blogs} title="All Blogs 2 !"></BlogList2>
+            <hr />
+            <BlogList3 blogs={blogs} title="All Blogs 3 !"></BlogList3>
         </div>
     );
 }

@@ -16,8 +16,14 @@ const Home = () => {
         setBlogs(newBlogs);
     }
 
+/*  usEffect to: ASYNC
+        - fetch data
+        - communicate with auth service
+        - etc...
+     */
     useEffect( () => { // this function runs every render
-       console.log ("use effect ran") 
+       console.log ("use effect ran");
+       console.log(blogs)  // output the elements of the state also
     });
 
     return (

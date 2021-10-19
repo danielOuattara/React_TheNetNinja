@@ -7,21 +7,30 @@ const Home = () => {
     const [blogs, setBlogs] = useState(null);
     const [isPending, setIsPending] = useState(true);
 
+    // ---------------------------------------------THEN/CATCH
+    // useEffect( () => { 
+    //         fetch("http://localhost:8000/blogs")
+    //         .then(res => {
+    //             return res.json()
+    //         })
+    //         .then(data => {
+    //             console.log(data);
+    //             setBlogs(data);
+    //             setIsPending(false);
+    //         })
+    //         .catch()
+    // }, []);
 
-    useEffect( () => { // this function runs every render
-        setTimeout( () => {
-            fetch("http://localhost:8000/blogs")
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
-                console.log(data);
-                setBlogs(data);
-                setIsPending(false);
-            })
-            .catch()
-        }, 2000)
-    }, []);
+
+    // ----------------------------------------------ASYNC/AWAIT
+    useEffect( () => { 
+        (async() => {
+            const output = await fetch("http://localhost:8000/blogs");
+            const data = await output.json()
+            setBlogs(data);
+            setIsPending(false);
+            
+        })()} , []);
 
     return (
         <div className="home">
