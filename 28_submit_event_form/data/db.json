@@ -1,0 +1,28 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "author": "Mario",
+            "title": "My website",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugit incidunt debitis magnam minus praesentium ad, sequi delectus itaque perspiciatis doloremque aspernatur laboriosam ex officia quis ea reprehenderit. Vero, totam."
+        },
+        {
+            "id": 2,
+            "author": "Luigi",
+            "title": "Welcome to party",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugit incidunt debitis magnam minus praesentium ad, sequi delectus itaque perspiciatis doloremque aspernatur laboriosam ex officia quis ea reprehenderit. Vero, totam."
+        },
+        {
+            "id": 3,
+            "author": "Stella",
+            "title": "Web dev top tips",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugit incidunt debitis magnam minus praesentium ad, sequi delectus itaque perspiciatis doloremque aspernatur laboriosam ex officia quis ea reprehenderit. Vero, totam."
+        },
+        {
+            "id": 4,
+            "author": "Danny Boy",
+            "title": "My journey to success",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugit incidunt debitis magnam minus praesentium ad, sequi delectus itaque perspiciatis doloremque aspernatur laboriosam ex officia quis ea reprehenderit. Vero, totam."
+        }
+    ]
+}

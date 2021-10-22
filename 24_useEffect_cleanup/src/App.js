@@ -13,7 +13,7 @@ function App() {
         <div className="content">
           <Switch>
             
-            <Route exact path="/">
+            <Route  exact path="/">
               <Home />
             </Route>
 
@@ -24,7 +24,7 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-
+        
           </Switch>
         </div>
       </div>

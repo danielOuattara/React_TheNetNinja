@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -6,7 +7,6 @@ const NavBar = () => {
             <h1>The Dojo BLog</h1>
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
                 <Link to="/create" 
                     style= {{
                         color:"white", 
@@ -14,6 +14,7 @@ const NavBar = () => {
                         borderRadius:"8px",
                     }}>New Blog !
                 </Link>
+                <Link to="/about">About</Link>
             </div>
         </nav>
     );
