@@ -1,6 +1,6 @@
 
-import  { useState, useEffect } from  "react";
-import  BlogList from "./BlogList"
+import { useState, useEffect } from  "react";
+import BlogList from "./BlogList"
 import BlogList2 from "./BlogList2";
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
         - fetch data
         - communicate with auth service
         - etc...
-     */
+*/
     useEffect( () => { // this function runs every render
        console.log ("use effect ran");
        console.log(blogs)  // output the elements of the state also
