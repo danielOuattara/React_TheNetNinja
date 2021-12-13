@@ -3,7 +3,6 @@ import BlogList from "./BlogList"
 import BlogList2 from "./BlogList2";
 
 const Home = () => {
-
     const [blogs, setBlogs] = useState([
         { title: "My new website",  body:"lorem ipsum...", author: "Mario",  id:1},
         { title: "Dynamic PHP",     body:"lorem ipsum...", author: "Mario",  id:2},

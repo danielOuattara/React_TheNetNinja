@@ -26,7 +26,7 @@ const Home = () => {
     useEffect( () => { 
         (async() => {
             const output = await fetch("http://localhost:8000/blogs");
-            const data = await output.json()
+            const data = await output.json();
             setBlogs(data);
             setIsPending(false);
             
