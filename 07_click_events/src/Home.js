@@ -17,7 +17,6 @@ const Home = () => {
         console.log("Hello " + name, "\n",  event.target);
     }
 
-
     return (  
         <div className="home">
             <h2>Homepage</h2>

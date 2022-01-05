@@ -3,7 +3,6 @@ import  { useState, useEffect } from  "react";
 import  BlogList from "./BlogList"
 
 const Home = () => {
-
     const [blogs, setBlogs] = useState(null);
     const [isPending, setIsPending] = useState(true);
 
@@ -27,10 +26,13 @@ const Home = () => {
         (async() => {
             const output = await fetch("http://localhost:8000/blogs");
             const data = await output.json();
-            setBlogs(data);
+            // setBlogs(data);
+            setBlogs(() => {
+                return data
+            });
             setIsPending(false);
-            
-        })()} , []);
+        })()
+    } , []);
 
     return (
         <div className="home">

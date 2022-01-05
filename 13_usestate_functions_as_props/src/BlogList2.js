@@ -1,3 +1,4 @@
+
 const BlogList2 = ({ blogs, title, handleDelete }) => {  // destructuring props 
 	return (
 		<div className="blog-list">

@@ -11,10 +11,10 @@ const Home = () => {
     return (
         <div className="home">
             { blogs.map( (blog) => ( // <-- parenthesis because it holds JSX. If it was holding javascript it would be curly brace
-                <div className="blog-preview" key={blog.id}>
+                <article className="blog-preview" key={blog.id}>
                     <h2>{blog.title}</h2>
                     <p>{blog.author}</p>
-                </div>
+                </article>
             ))}
         </div>
     );

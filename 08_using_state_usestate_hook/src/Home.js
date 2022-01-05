@@ -1,7 +1,7 @@
 
 // const Home = () => {
 //     let name ="Mario";
-//     const handleClick = () => { // the variable "name" changes but React is not aware.
+//     const handleClick = () => { // the variable "name" changes but React is not aware of this change.
 //        name = "Luigi";
 //        console.log(name); 
 //     }

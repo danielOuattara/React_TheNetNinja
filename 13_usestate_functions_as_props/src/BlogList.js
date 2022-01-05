@@ -3,7 +3,6 @@ const BlogList = (props) => {  // props is an object
 	const blogs = props.blogs;
 	const title = props.title;
 	const handleDelete = props.handleDelete
-	// console.log(props);
 	
 	return (
 		<div className="blog-list">
@@ -13,7 +12,7 @@ const BlogList = (props) => {  // props is an object
 					<h2>{blog.title}</h2>
 					<p>{blog.author}</p>
 					<button onClick={() => handleDelete(blog.id)}> Delete </button> 
-					<button onClick={() => props.handleDelete(blog.id)}> Delete </button> 
+					<button onClick={() => props.handleDelete(blog.id)}> Delete 2 </button> 
                 </div>
             ))}
 		</div>

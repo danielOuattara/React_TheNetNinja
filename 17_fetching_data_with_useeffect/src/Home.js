@@ -14,28 +14,31 @@ const Home = () => {
     //         console.log(data);
     //         setBlogs(data)
     //     })
-    //     .catch()
+    //     .catch(err => console.log(err.message))
     // }, []);
 
 
-    // ASYNC/AWAIT
-    // useEffect( () => { // this function runs every render
-    //     (async () =>  {
-    //         let output = await fetch("http://localhost:8000/blogs");
-    //         const data = await output.json();
-    //         console.log(data);
-    //         setBlogs(data);
-    //     }
-    // )()}, []);
-
-    // ASYNC/AWAIT
+    /*  ASYNC/AWAIT 
+    -----------------*/
     useEffect( () => { // this function runs every render
         (async () =>  {
-            let data = await (await fetch("http://localhost:8000/blogs")).json();
+            let output = await fetch("http://localhost:8000/blogs");
+            const data = await output.json();
             console.log(data);
             setBlogs(data);
+        }
+    )()}, []);
 
-        })()}, []);
+
+    /*  ASYNC/AWAIT 
+    ----------------*/
+    // useEffect( () => { // this function runs every render
+    //     (async () =>  {
+    //         let data = await (await fetch("http://localhost:8000/blogs")).json();
+    //         console.log(data);
+    //         setBlogs(data);
+
+    //     })()}, []);
 
     return (
         <div className="home">
@@ -45,7 +48,6 @@ const Home = () => {
 
             { blogs && <BlogList2  blogs={blogs.filter( blog => blog.author === "Mario")} 
                         title="Mario Blogs !" /> }
-
 
             <button onClick={()=> setName("Luigi")}>Change name</button>
             <p>{name}</p>

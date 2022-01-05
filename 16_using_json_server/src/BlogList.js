@@ -3,7 +3,6 @@ const BlogList = (props) => {  // props is an object
 	const blogs = props.blogs;
 	const title = props.title;
 	const handleDelete = props.handleDelete
-	// console.log(props);
 	
 	return (
 		<div className="blog-list">

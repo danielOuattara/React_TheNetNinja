@@ -11,11 +11,15 @@ const Home = () => {
         { title: "Web dev top tips",   body:"lorem ipsum...", author: "Stella", id:3},
     ]);
 
-    const [name, setName] = useState("Mario"); // another pice of state
+    const [name, setName] = useState("Mario"); // another piece of state
 
     const handleDelete = (id) => { 
         const newBlogs = blogs.filter( blog => blog.id !== id);
         setBlogs(newBlogs);
+    }
+
+    const handleNameChange = () => {
+        name === "Mario" ? setName('Luigi') : setName('Mario');
     }
 
     // useEffect( () => { // this function runs every render
@@ -24,8 +28,8 @@ const Home = () => {
 
 
     useEffect( () => { // this function runs every render
+        console.log ("useEffect ran") 
         console.log(name) 
-        console.log ("use effect ran") 
     }, [name]); //  [name] = dependency array <-- Only [name] rendered by useEffect;
 
     return (
@@ -44,6 +48,7 @@ const Home = () => {
             <hr /><br />
 
             <button onClick={()=> setName("Luigi")}>Change name</button>
+            <button onClick={handleNameChange}>Change name</button>
             <p>{name}</p>
         </div>
     );

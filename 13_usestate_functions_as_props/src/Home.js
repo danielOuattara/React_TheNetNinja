@@ -10,9 +10,16 @@ const Home = () => {
         { title: "Web dev top tips",   body:"lorem ipsum...", author: "Stella", id:4},
     ]);
 
-    const handleDelete = (id) => { 
-        const newBlogs = blogs.filter( blog => blog.id !== id);
-        setBlogs(newBlogs);
+    // const handleDelete = (id) => { 
+    //     const newBlogs = blogs.filter( blog => blog.id !== id);
+    //     setBlogs(newBlogs);
+    // }
+
+    const handleDelete = (id) => {
+        setBlogs(() => { // better for Async !
+            const newBlogs = blogs.filter(blog => blog.id !== id);
+            return newBlogs;
+        });
     }
 
     return (
@@ -26,7 +33,7 @@ const Home = () => {
             <BlogList2 
                 blogs={blogs.filter( blog => blog.author === "Mario")} 
                 title="Mario Blogs !" 
-                handleDelete={ handleDelete } />
+                handleDelete={handleDelete} />
         </div>
     );
 }
